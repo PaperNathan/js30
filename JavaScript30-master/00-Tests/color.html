@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Colorful</title>
+</head>
+
+<body>
+
+  <div id = "testing-stuff">
+
+  </div>
+
+
+<!-- CSS -->
+  <style>
+
+    :root {
+      --base: rgb(0, 0, 0);
+    }
+
+    #testing-stuff {
+      height: calc(100vh + 15px);
+      width: calc(100vw + 15px);
+      margin: -15px;
+      background-color: var(--base);
+      transition: all 1s;
+    }
+
+  </style>
+
+<!-- JAVASCRIPT  -->
+  <script>
+
+    const test = document.querySelector("#testing-stuff");
+
+    setInterval(function() {
+      var r = Math.floor((Math.random() * 255));
+      var g = Math.floor((Math.random() * 255));
+      var b = Math.floor((Math.random() * 255));
+      var newColor = "rgb(" + r + ", " + g + ", " + b + ")";
+      console.log(newColor);
+      document.documentElement.style.setProperty("--base",  newColor);
+    }, 1000);
+
+
+  </script>
+
+
+</body>
+</html>
