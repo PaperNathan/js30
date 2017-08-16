@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Searching Nobel Prizes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <form class="search-form">
+    <input type="text" class="search" placeholder="Prize Category or Year">
+    <ul class="suggestions">
+      <li>Filter for a Nobel Prize Category</li>
+      <li>or a Year</li>
+    </ul>
+  </form>
+
+<script>
+  const endpoint = '{}';
+  const nobel = [];
+
+  fetch(endpoint)
+      .then(blob => blob.json());
+      .then()
+
+
+
+</script>
+
+
+</body>
+</html>
